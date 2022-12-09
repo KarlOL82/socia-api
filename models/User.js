@@ -15,5 +15,12 @@ const userSchema = new schema(
             required: true,
             unique: true,
         },
+
+        thoughts: [
+            {
+                type: Schema.types.objectId,
+                ref: 'Thought'
+            }
+        ]
     }
 )
