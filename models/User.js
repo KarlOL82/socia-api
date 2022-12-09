@@ -21,6 +21,17 @@ const userSchema = new schema(
                 type: Schema.types.objectId,
                 ref: 'Thought'
             }
+        ],
+
+        friends: [
+            {
+                type: Schema.types.objectId,
+                ref: 'User'
+            }
         ]
     }
-)
+);
+
+const User = model('user', userSchema);
+
+module.exports = User;
