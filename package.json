@@ -1,0 +1,20 @@
+{
+  "name": "social-api",
+  "version": "1.0.0",
+  "description": "A backend API with a Mongo DB database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlOL82/social-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarlOL82/social-api/issues"
+  },
+  "homepage": "https://github.com/KarlOL82/social-api#readme"
+}
