@@ -18,7 +18,7 @@ const thoughtSchema = new schema(
         username: {
             type: String,
             required: true,
-        }
+        },
 
         reactions: [
             {
@@ -36,6 +36,6 @@ const thoughtSchema = new schema(
     }
 );
 
-const User = model('user', userSchema);
+const Thought = model('thought', userSchema);
 
-module.exports = User;
+module.exports = Thought;
