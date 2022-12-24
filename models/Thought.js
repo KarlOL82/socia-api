@@ -15,6 +15,8 @@ const thoughtSchema = new schema(
             type: Date,
             required: true,
             unique: true,
+            default: Date.now,
+            get: formatDate,
         },
 
         username: {
@@ -35,9 +37,29 @@ const thoughtSchema = new schema(
                 ref: 'User'
             }
         ]
-    }
+    },
+    {
+        toJSON: {
+          virtuals: true,
+          getters: true,
+        },
+        id: false,
+      }
 );
 
-const Thought = model('thought', userSchema);
+thoughtSchema
+  .virtual('reactionCount')
+  .get(function () {
+    return this.reactions.length;
+  });
+
+  // When data is pulled, convert created date to readable string
+function formatDate(date) {
+    return date.toLocaleString();
+  }; 
+
+// Initialize our Thought model
+const Thought = model('Thought', thoughtSchema);
+
 
 module.exports = Thought;
