@@ -1,11 +1,13 @@
 const { schema, model } = require('mongoose');
+const Reaction = require('./Reaction');
 
 const thoughtSchema = new schema(
     {
         thoughtText: {
             type: String,
             required: true,
-            max_length: 280
+            minLength: 1,
+            maxLength: 280
 
         },
 
