@@ -14,6 +14,7 @@ const userSchema = new schema(
             type: String,
             required: true,
             unique: true,
+            match: [ /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, 'Please add a valid email address.',],
         },
 
         thoughts: [
