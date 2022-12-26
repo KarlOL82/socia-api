@@ -30,7 +30,13 @@ const userSchema = new schema(
                 ref: 'User'
             }
         ]
-    }
+    },
+    {
+        toJSON: {
+          virtuals: true,
+        },
+        id: false,
+      }
 );
 
 const User = model('user', userSchema);
