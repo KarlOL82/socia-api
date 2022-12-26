@@ -19,7 +19,7 @@ const userSchema = new schema(
 
         thoughts: [
             {
-                type: Schema.types.objectId,
+                type: Schema.Types.ObjectId,
                 ref: 'Thought'
             }
         ],
